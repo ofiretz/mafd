@@ -256,12 +256,12 @@ echo "1) P03 results:
 
 python parse_results.py 2 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p04.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_2_rovers > agents
-rm comm && insert_2_addr > comm
 
 ./2_agents
 
@@ -270,12 +270,12 @@ echo "2) P04 results:
 
 python parse_results.py 2 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p05.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_2_rovers > agents
-rm comm && insert_2_addr > comm
 
 ./2_agents
 
@@ -284,12 +284,12 @@ echo "3) P05 results:
 
 python parse_results.py 2 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p06.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_2_rovers > agents
-rm comm && insert_2_addr > comm
 
 ./2_agents
 
@@ -298,12 +298,17 @@ echo "4) P06 results:
 
 python parse_results.py 2 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p07.pddl
 
 ./preprocess/preprocess < output.sas
 
-rm agents && insert_3_rovers > agents
-rm comm && insert_3_addr > comm
+echo "rover2" >> agents
+perl -pi -w -e 's/2/3/g;' agents
+echo "127.0.0.1:3012" >> comm
+
 
 ./3_agents
 
@@ -312,12 +317,16 @@ echo "5) P07 results:
 
 python parse_results.py 3 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p08.pddl
 
 ./preprocess/preprocess < output.sas
 
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
+echo "rover3" >> agents
+perl -pi -w -e 's/3/4/g;' agents
+echo "127.0.0.1:3013" >> comm
 
 ./4_agents
 
@@ -326,12 +335,12 @@ echo "6) P08 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p09.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
 
 ./4_agents
 
@@ -340,12 +349,12 @@ echo "7) P09 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p010.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
 
 ./4_agents
 
@@ -354,12 +363,12 @@ echo "8) P10 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p11.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
 
 ./4_agents
 
@@ -368,12 +377,12 @@ echo "9) P11 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p12.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
 
 ./4_agents
 
@@ -382,12 +391,12 @@ echo "10) P12 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p13.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
 
 ./4_agents
 
@@ -396,12 +405,12 @@ echo "11) P13 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p14.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
 
 ./4_agents
 
@@ -410,12 +419,12 @@ echo "12) P14 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p15.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
 
 ./4_agents
 
@@ -424,12 +433,12 @@ echo "13) P15 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p16.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_4_rovers > agents
-rm comm && insert_4_addr > comm
 
 ./4_agents
 
@@ -438,12 +447,18 @@ echo "14) P16 results:
 
 python parse_results.py 4 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p17.pddl
 
 ./preprocess/preprocess < output.sas
 
-rm agents && insert_6_rovers > agents
-rm comm && insert_6_addr > comm
+echo "rover4" >> agents
+echo "rover5" >> agents
+perl -pi -w -e 's/4/6/g;' agents
+echo "127.0.0.1:3014" >> comm
+echo "127.0.0.1:3015" >> comm
 
 ./6_agents
 
@@ -452,12 +467,12 @@ echo "15) P17 results:
 
 python parse_results.py 6 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p18.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_6_rovers > agents
-rm comm && insert_6_addr > comm
 
 ./6_agents
 
@@ -466,12 +481,12 @@ echo "16) P18 results:
 
 python parse_results.py 6 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p19.pddl
 
 ./preprocess/preprocess < output.sas
-
-rm agents && insert_6_rovers > agents
-rm comm && insert_6_addr > comm
 
 ./6_agents
 
@@ -480,12 +495,18 @@ echo "17) P19 results:
 
 python parse_results.py 6 >> tmp_results_file.txt
 
+echo "
+" >> tmp_results_file.txt
+
 ./translate/translate.py ../benchmarks/rovers/domain.pddl ../benchmarks/rovers/p20.pddl
 
 ./preprocess/preprocess < output.sas
 
-rm agents && insert_8_rovers > agents
-rm comm && insert_8_addr > comm
+echo "rover6" >> agents
+echo "rover7" >> agents
+perl -pi -w -e 's/6/8/g;' agents
+echo "127.0.0.1:3016" >> comm
+echo "127.0.0.1:3017" >> comm
 
 ./8_agents
 
@@ -493,4 +514,13 @@ echo "18) P20 results:
 " >> tmp_results_file.txt
 
 python parse_results.py 8 >> tmp_results_file.txt
+
+echo "
+" >> tmp_results_file.txt
+
+
+
+
+
+
 
