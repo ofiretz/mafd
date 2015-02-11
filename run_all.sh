@@ -7,235 +7,10 @@ alias insert_2_rovers='echo "2
 rover0
 rover1"'
 
-alias insert_3_rovers='echo "3
-rover0
-rover1
-rover2"'
-
-alias insert_4_rovers='echo "4
-rover0
-rover1
-rover2
-rover3"'
-
-alias insert_5_rovers='echo "5
-rover0
-rover1
-rover2
-rover3
-rover4"'
-
-alias insert_6_rovers='echo "6
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5"'
-
-alias insert_7_rovers='echo "7
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5
-rover6"'
-
-alias insert_8_rovers='echo "8
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5
-rover6
-rover7"'
-
-alias insert_9_rovers='echo "9
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5
-rover6
-rover7
-rover8"'
-
-alias insert_10_rovers='echo "10
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5
-rover6
-rover7
-rover8
-rover9"'
-
-alias insert_11_rovers='echo "11
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5
-rover6
-rover7
-rover8
-rover9
-rover10"'
-
-alias insert_12_rovers='echo "12
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5
-rover6
-rover7
-rover8
-rover9
-rover10
-rover11"'
-
-alias insert_13_rovers='echo "13
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5
-rover6
-rover7
-rover8
-rover9
-rover10
-rover11
-rover12"'
-
-alias insert_14_rovers='echo "14
-rover0
-rover1
-rover2
-rover3
-rover4
-rover5
-rover6
-rover7
-rover8
-rover9
-rover10
-rover11
-rover12
-rover13"'
-
 alias insert_1_addr='echo "127.0.0.1:3010"'
 
 alias insert_2_addr='echo "127.0.0.1:3010
 127.0.0.1:3011"'
-
-alias insert_3_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012"'
-
-alias insert_4_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013"'
-
-alias insert_5_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014"'
-
-alias insert_6_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014
-127.0.0.1:3015"'
-
-alias insert_7_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014
-127.0.0.1:3015
-127.0.0.1:3016"'
-
-alias insert_8_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014
-127.0.0.1:3015
-127.0.0.1:3016
-127.0.0.1:3017"'
-
-alias insert_9_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014
-127.0.0.1:3015
-127.0.0.1:3016
-127.0.0.1:3017
-127.0.0.1:3018"'
-
-alias insert_10_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014
-127.0.0.1:3015
-127.0.0.1:3016
-127.0.0.1:3017
-127.0.0.1:3018
-127.0.0.1:3019"'
-
-alias insert_11_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014
-127.0.0.1:3015
-127.0.0.1:3016
-127.0.0.1:3017
-127.0.0.1:3018
-127.0.0.1:3019
-127.0.0.1:3020"'
-
-alias insert_12_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014
-127.0.0.1:3015
-127.0.0.1:3016
-127.0.0.1:3017
-127.0.0.1:3018
-127.0.0.1:3019
-127.0.0.1:3020
-127.0.0.1:3021"'
-
-alias insert_13_addr='echo "127.0.0.1:3010
-127.0.0.1:3011
-127.0.0.1:3012
-127.0.0.1:3013
-127.0.0.1:3014
-127.0.0.1:3015
-127.0.0.1:3016
-127.0.0.1:3017
-127.0.0.1:3018
-127.0.0.1:3019
-127.0.0.1:3020
-127.0.0.1:3021
-127.0.0.1:3022"'
 
 ./build_all
 
@@ -246,15 +21,18 @@ alias insert_13_addr='echo "127.0.0.1:3010
 rm agents && insert_2_rovers > agents
 rm comm && insert_2_addr > comm
 
-./2_agents
-
 echo "---------- Rovers ----------
 " >> tmp_results_file.txt
 
 echo "1) P03 results: 
 " >> tmp_results_file.txt
 
+./2_agents
+
 python parse_results.py 2 >> tmp_results_file.txt
+
+rm 0
+rm 1
 
 echo "
 " >> tmp_results_file.txt
@@ -270,6 +48,9 @@ echo "2) P04 results:
 
 python parse_results.py 2 >> tmp_results_file.txt
 
+rm 0
+rm 1
+
 echo "
 " >> tmp_results_file.txt
 
@@ -283,6 +64,9 @@ echo "3) P05 results:
 " >> tmp_results_file.txt
 
 python parse_results.py 2 >> tmp_results_file.txt
+
+rm 0
+rm 1
 
 echo "
 " >> tmp_results_file.txt
@@ -305,10 +89,9 @@ echo "
 
 ./preprocess/preprocess < output.sas
 
-echo "rover2" >> agents
 perl -pi -w -e 's/2/3/g;' agents
+echo "rover2" >> agents
 echo "127.0.0.1:3012" >> comm
-
 
 ./3_agents
 
@@ -324,8 +107,8 @@ echo "
 
 ./preprocess/preprocess < output.sas
 
-echo "rover3" >> agents
 perl -pi -w -e 's/3/4/g;' agents
+echo "rover3" >> agents
 echo "127.0.0.1:3013" >> comm
 
 ./4_agents
@@ -454,9 +237,9 @@ echo "
 
 ./preprocess/preprocess < output.sas
 
+perl -pi -w -e 's/4/6/g;' agents
 echo "rover4" >> agents
 echo "rover5" >> agents
-perl -pi -w -e 's/4/6/g;' agents
 echo "127.0.0.1:3014" >> comm
 echo "127.0.0.1:3015" >> comm
 
@@ -502,9 +285,9 @@ echo "
 
 ./preprocess/preprocess < output.sas
 
+perl -pi -w -e 's/6/8/g;' agents
 echo "rover6" >> agents
 echo "rover7" >> agents
-perl -pi -w -e 's/6/8/g;' agents
 echo "127.0.0.1:3016" >> comm
 echo "127.0.0.1:3017" >> comm
 
@@ -517,10 +300,3 @@ python parse_results.py 8 >> tmp_results_file.txt
 
 echo "
 " >> tmp_results_file.txt
-
-
-
-
-
-
-
